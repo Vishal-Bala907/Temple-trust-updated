@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/"
+	th:replace="~{userLayout::base(~{::section})}">
+<head>
+<title>Document</title>
+<link rel="stylesheet" th:href="@{/css/login-page.css}" />
+</head>
+<body>
+
+
+	<section class="main-section">
+
+		<div class="sidebar" id="sidebar">
+			<span id="sidebar-menu"
+				class="material-symbols-outlined sidebar-button"> close </span>
+
+			<nav>
+				<ul class="sidebar-ul" id="sidebar-ul">
+					<li class="sidebar-li" id="pro"><a th:href="@{/products}">
+							Shop </a></li>
+					<li class="sidebar-li" id="pooja-li"><a
+						th:href="@{/pooja-slot}"> Pooja Slot </a></li>
+
+					<li class="sidebar-li" id="darshan-li"><a
+						th:href="@{/darshan-slot}"> Darshan Slot </a></li>
+					<li class="sidebar-li" id="artist-li"><a
+						th:href="@{/book-artist}">Book Artist</a></li>
+					<li class="sidebar-li" id="donate-li"><a th:href="@{/donate}">Donate</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="contentArea" id="contentArea">
+			<div id="artist" class="artist base-style">
+				<div class="container mt-5 col-7">
+					<div class="container">
+						<h2 class="mt-5 text-center">Make a Payment</h2>
+						<form action="charge.php" method="POST">
+							<div class="form-group">
+								<label for="name">Name:</label> <input type="text"
+									class="form-control" id="name" name="name" required>
+							</div>
+							<div class="form-group">
+								<label for="email">Email:</label> <input type="email"
+									class="form-control" id="email" name="email" required>
+							</div>
+							<div class="form-group">
+								<label for="name">Contact:</label> <input type="text"
+									class="form-control" id="contact" name="contact" required>
+							</div>
+							<div class="form-group">
+								<label for="amount">Amount (INR):</label> <input type="number"
+									class="form-control" id="amount" name="amount" required>
+							</div>
+							
+							<button type="submit" id="pay-now-button" class="btn btn-primary mt-3 text-center">Pay Now</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+
+
+</body>
+</html>

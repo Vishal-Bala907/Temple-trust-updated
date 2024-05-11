@@ -1,0 +1,20 @@
+@media screen and (min-width:300px) and (max-width: 800px) {
+	.add-product-section {
+		background-color: #d7f3ff;
+		height: 50vh;
+		padding: 5%;
+		display: flex;
+		/* place-items: center; */
+		align-items: center;
+		justify-content: center;
+	}
+	.additemsform {
+		height: 100%;
+		display: grid;
+		row-gap: 5%;
+	}
+	.add-product-form-items {
+		display: grid;
+		row-gap: 15%;
+	}
+}

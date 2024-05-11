@@ -1,0 +1,70 @@
+.cart {
+	display: flex;
+	width: 76%;
+}
+
+.my-cart-items {
+	display: flex;
+	justify-content: center;
+	width: 70%;
+	background: white;
+	flex-wrap: wrap;
+	gap: 2%;
+	overflow: auto;
+	padding: 2%;
+}
+
+.cart-bill {
+	/* width: 30%; */
+	/* height: 60%; */
+	/* background-color: aqua; */
+	text-align: center;
+	column-gap: 2%;
+	margin-top: 15%;
+	background-color: white;
+	/* border: 2px solid black; */
+	/* display: flex; */
+	flex-direction: column;
+	overflow: auto;
+	margin: auto;
+	margin-left: 2%;
+}
+/* border-radius: 22px;
+}
+
+.card-bill {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: auto;
+	max-height: 50%;
+}
+
+.cart-items-bill {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	column-gap: 2%;
+} */
+.cartDiv {
+	display: flex;
+	flex-direction: column;
+}
+
+.total {
+	display: flex;
+	justify-content: center;
+	flex-direction:column;
+	align-items: center;
+	/* margin-top: 20px; */
+	border-top: 3px solid;
+	background-color: #bfbfbf;
+	height: 30%;
+}
+
+.bold {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

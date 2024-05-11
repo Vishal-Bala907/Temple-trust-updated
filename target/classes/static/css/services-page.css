@@ -1,0 +1,118 @@
+.main-section {
+	display: flex;
+}
+
+.sidebar {
+    width: 30%;
+    background: #FFF3C7;
+    height: 100vh;
+}
+
+.contentArea {
+	background-color: white;
+	width: 100%;
+}
+
+.sidebar-ul {
+	display: flex;
+	margin-top: 63%;
+	padding: 0;
+	justify-content: center;
+	flex-direction: column;
+	row-gap: 4vh;
+	visibility: visible;
+}
+
+.sidebar-ul li {
+	list-style: none;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	font-size: x-large;
+}
+
+.sidebar-ul li:hover {
+	background-color: orange;
+	font-weight: 600;
+	color: aliceblue;
+	border-bottom: 2px solid black;
+	cursor: pointer;
+}
+
+#sidebar-menu {
+	top: 0;
+	width: 100%;
+	height: 4%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: xx-large;
+	cursor: pointer;
+}
+
+.closed-sidebar {
+	width: 5%;
+	height: 100vh;
+	    /* height: 132em; */
+	background: #FFF3C7;
+}
+.about-content{
+	height: 125em;
+}
+
+.closed-sidebar-ul {
+	display: flex;
+	visibility: hidden;
+}
+
+/* Large Cards  */
+.base-style {
+	background-color: rgb(255, 255, 255);
+	height: 100%;
+	width: 70.8%;
+	position: absolute;
+	/* visibility: hidden; */
+}
+
+.donate {
+	background-color: white;
+}
+
+.artist {
+	background-color: white;
+}
+
+.darshan-slot {
+	background-color: white;
+}
+
+.pooja-slot {
+	background-color: white;
+}
+
+.products {
+	background-color: white;
+}
+
+.pooja-slot-form {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+}
+
+#products,#remove-products {
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5%;
+    row-gap: 2vh;
+    column-gap: 2%;
+    justify-content: center;
+    align-items: normal;
+    overflow-y: auto;
+    width: 77%;
+}
+.hidden{
+	visibility: hidden;
+}

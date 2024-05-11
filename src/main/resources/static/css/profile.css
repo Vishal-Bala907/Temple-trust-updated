@@ -1,0 +1,10 @@
+.buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	column-gap: 3%;
+}
+.admin{
+	
+}

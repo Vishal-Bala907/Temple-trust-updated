@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/"
+	th:replace="~{layout::base(~{::section})}">
+<head>
+<title>Document</title>
+</head>
+<body>
+
+
+	<section class="product-page-section container col-6">
+		<h2 class="mb-3 mt-3 text-center">Sign-Up From Here</h2>
+		<form th:action="@{/register}" method="post" th:object="${devotee}">
+
+			<!-- 	<span> <span th:if="${#fields.hasErrors('*')}"> <span
+					style="color: red;" th:each="err : ${#fields.errors('*')}"
+					th:text="${err}"><br /></span>
+			</span>
+			</span> -->
+
+			<div class="mb-3">
+				<label for="exampleInputName" class="form-label">UserName</label> <input
+					type="text" class="form-control" id="exampleInputName"
+					aria-describedby="emailHelp" th:field="*{username}"> 
+					<span
+					style="color: red;" th:if="${#fields.hasErrors('username')}"
+					th:errors="*{username}"></span>
+			</div>
+
+			<div class="mb-3">
+				<label for="exampleInputEmail1" class="form-label">Email
+					address</label> <input type="email" class="form-control"
+					id="exampleInputEmail1" aria-describedby="emailHelp"
+					th:field="*{email}">
+					<span
+					style="color: red;" th:if="${#fields.hasErrors('email')}"
+					th:errors="*{email}"></span>
+				<div id="emailHelp" class="form-text">We'll never share your
+					email with anyone else.</div>
+					
+			</div>
+
+			<div class="mb-3">
+				<label for="exampleInputNumber" class="form-label">Phone
+					Number</label> <input type="text" class="form-control"
+					id="exampleInputNumber" aria-describedby="emailHelp"
+					th:field="*{phone}">
+					<span
+					style="color: red;" th:if="${#fields.hasErrors('phone')}"
+					th:errors="*{phone}"></span>
+			</div>
+
+			<div class="mb-3">
+				<label for="InputPassword" class="form-label">Password</label>
+				<div>
+					<input type="password" class="form-control" id="InputPassword"
+						th:field="*{password}"> <span
+						class="material-symbols-outlined eye" id="pvisibility">
+						visibility </span>
+							<span
+					style="color: red;" th:if="${#fields.hasErrors('password')}"
+					th:errors="*{password}"></span>
+				</div>
+			</div>
+
+
+			<div class="login-page-button-div">
+				<button type="submit" class="btn btn-primary mb-3 mt-4">Submit</button>
+				<br /> <span>Already Have an Account: <a th:href="@{/login}"
+					class="signup-link">Login From Here</a>
+				</span>
+			</div>
+		</form>
+	</section>
+</body>
+</html>

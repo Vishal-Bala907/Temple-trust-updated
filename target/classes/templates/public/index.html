@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://thymeleaf.org/"
+	th:replace="~{userLayout::base(~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title th:text="${title}">Insert title here</title>
+
+</head>
+<body style="font-family: 'Oxygen', sans-serif;">
+	<section>
+		<section>
+			<div class="px-4 py-5 my-5 text-center">
+				<img class="d-block mx-auto mb-4" th:src="@{images/templeLogo.jpeg}"
+					alt="temple logo" width="72" height="57">
+				<h1 class="display-5 fw-bold text-body-emphasis">Temple Trust
+					Donations</h1>
+				<div class="col-lg-6 mx-auto">
+					<p class="lead mb-4">Enter the hallowed halls of Temple Trust,
+						where the rhythm of rituals and the melody of chants resonate with
+						the pulse of the universe.</p>
+					<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+						<a type="button"
+							class="btn btn-primary btn-lg px-4 gap-3 login-signup-buttons"
+							th:href="@{/login}">Login </a> <a th:href="@{/register-page}"
+							type="button"
+							class="btn btn-primary btn-lg px-4 login-signup-buttons">SignUp</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="donate-purchase-section">
+
+			<div class="card" style="width: 18rem;">
+				<img th:src="@{images/services.png}" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">
+						<strong>Services</strong>
+					</h5>
+					<p class="card-text">Experience the tranquility of our
+						sanctuary and benefit from a variety of spiritual services,
+						including meditation sessions, yoga classes, and community events</p>
+					<br /> <a th:href="@{/products}" class="btn btn-primary">Services</a>
+				</div>
+			</div>
+
+
+			<div class="card" style="width: 18rem;">
+				<img th:src="@{images/donate.jpg}" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">
+						<strong>Donate</strong>
+					</h5>
+					<p class="card-text">Your donation supports our temple's daily
+						rituals, community programs, and upkeep. Contribute today to help
+						us continue our mission of service and spirituality.</p>
+					<br /> <a th:href="@{/donate}" class="btn btn-primary">Donate</a>
+				</div>
+			</div>
+
+			<div class="card" style="width: 18rem;">
+				<img th:src="@{images/temple.jpg}" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">
+						<strong> Shop</strong>
+					</h5>
+					<p class="card-text">Discover divine treasures at our temple's
+						store. From sacred idols to blessed prasad, each purchase supports
+						our temple's mission and spreads spirituality.</p>
+					<a th:href="@{/products}" class="btn btn-primary">Purchase</a>
+				</div>
+			</div>
+
+			<div class="card" style="width: 18rem;">
+				<img th:src="@{images/slot.jpg}" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">
+						<strong> Book Slots</strong>
+					</h5>
+					<p class="card-text">Reserve your sacred moments with our
+						easy-to-use slot booking system. Choose your preferred time for
+						darshan and pooja, ensuring a seamless and personalized
+						experience.</p>
+					<a th:href="@{/pooja-slot}" class="btn btn-primary">Book Slot</a>
+				</div>
+			</div>
+		</section>
+	</section>
+
+
+
+
+
+	<script type="text/javascript"
+		th:src="@{/javascript/screen-menu-item-click.js}"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+::-webkit-scrollbar{
+  width: 2px;
+}
+::-webkit-scrollbar-track{
+  background-color: rgba(194, 194, 191, 0.462);
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgb(255, 55, 0);
+}

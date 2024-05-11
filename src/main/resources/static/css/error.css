@@ -1,0 +1,20 @@
+.error {
+	color: red;
+	background-color: #ecebeb;
+	position: absolute;
+	top: -24%;
+	margin-left: -20%;
+	/* padding: 1%;
+ */}
+ 
+ .buttons{
+     width: 100%;
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    border: 2px solid #afafaf;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    }

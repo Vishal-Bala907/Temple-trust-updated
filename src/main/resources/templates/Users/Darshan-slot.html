@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/"
+	th:replace="~{userLayout::base(~{::section})}">
+<head>
+<title>Document</title>
+<link rel="stylesheet" th:href="@{/css/login-page.css}" />
+</head>
+<body>
+
+
+	<section class="main-section">
+
+		<div class="sidebar" id="sidebar">
+			<span id="sidebar-menu"
+				class="material-symbols-outlined sidebar-button"> close </span>
+
+			<nav>
+				<ul class="sidebar-ul" id="sidebar-ul">
+					<li class="sidebar-li" id="pro"><a th:href="@{/products}">
+							Shop </a></li>
+					<li class="sidebar-li" id="pooja-li"><a
+						th:href="@{/pooja-slot}"> Pooja Slot </a></li>
+
+					<li class="sidebar-li" id="darshan-li"><a
+						th:href="@{/darshan-slot}"> Darshan Slot </a></li>
+					<li class="sidebar-li" id="artist-li"><a
+						th:href="@{/book-artist}">Book Artist</a></li>
+					<li class="sidebar-li" id="donate-li"><a th:href="@{/donate}">Donate</a></li>
+					<li class="sidebar-li" id="donate-li"><a
+						th:href="@{/hall-booking}">Hall Booking</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="contentArea" id="contentArea">
+			<div id="darshan-slot" class="darshan-slot base-style">
+				<div class="container mt-5 col-7">
+					<h2 class="text-center mb-4">
+						<b> Book Darshan Slot</b>
+					</h2>
+					<form class="pooja-slot-form" th:action="@{/book-darshan-slot}"
+						method="post" th:object="${darshanSlot}">
+						<div class="form-group">
+							<label for="name">Full Name:</label> <input type="text"
+								class="form-control" id="name" th:field="*{name}"
+								placeholder="Enter your full name" required> <span
+								style="color: red;" th:if="${#fields.hasErrors('name')}"
+								th:errors="*{name}"></span>
+						</div>
+						<div class="form-group">
+							<label for="email">Email Address:</label> <input type="email"
+								class="form-control" id="email" th:field="*{email}"
+								placeholder="Enter your email address" required> <span
+								style="color: red;" th:if="${#fields.hasErrors('email')}"
+								th:errors="*{email}"></span>
+
+						</div>
+						<div class="form-group">
+							<label for="phone">Phone Number:</label> <input type="tel"
+								class="form-control" id="phone" th:field="*{number}"
+								placeholder="Enter your phone number" required> <span
+								style="color: red;" th:if="${#fields.hasErrors('number')}"
+								th:errors="*{number}"></span>
+						</div>
+						<div class="form-group">
+							<label for="date">Preferred Date:</label> <input type="date"
+								th:field="*{date}" class="form-control" id="date" required>
+							<span style="color: red;" th:if="${#fields.hasErrors('date')}"
+								th:errors="*{date}"></span>
+						</div>
+
+						<div class="form-group">
+							<label for="time">Preferred Time:</label> <input type="time"
+								th:field="*{time}" class="form-control" id="time" required>
+						</div>
+
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+					<div
+						th:classappend="${darshan != null} ?  'mt-2 confirmation' : 'hidden'"
+						id="modal">
+						<div id="content">
+							<h1>Temple Trust Donations</h1>
+							<hr />
+							<hr />
+							<b>
+								<p th:text="${darshan}"></p>
+							</b>
+							<hr />
+							<p th:text="${name}"></p>
+							<hr />
+							<p th:text="${email}"></p>
+							<hr />
+							<p th:text="${number}"></p>
+							<hr />
+							<p th:text="${date}"></p>
+							<hr />
+							<p th:text="${time}"></p>
+							<hr />
+						</div>
+
+						<div class="buttons">
+							<span id="closeButton" class="closeButton" th:text="${button}"
+								onclick="closeTheUserModal()"></span> <span id="reciept"
+								class="reciept" th:text="${reciept}" onclick="downloadReceipt()"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<script type="text/javascript" th:src="@{/javascript/service-page.js}"></script>
+</body>
+</html>
